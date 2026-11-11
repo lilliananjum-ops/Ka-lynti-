@@ -10,6 +10,7 @@ const pages = [
   'rights.html',
   'support.html',
   'opportunities.html',
+  'todo.html',
   'about.html',
 ]
 

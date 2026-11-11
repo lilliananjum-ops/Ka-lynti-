@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A simple private to-do list that saves tasks in this browser.">
+  <title>My To-do List | Ka Lynti</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/todo.css">
+  <script defer src="js/site.js"></script>
+  <script defer src="js/todo.js"></script>
+</head>
+<body>
+  <header data-site-header></header>
+  <main>
+    <section class="page-hero wrap todo-hero">
+      <p class="eyebrow">KA LYNTI / YOUR SPACE</p>
+      <h1>A little more <em>organized.</em></h1>
+      <p class="lead">Keep track of what matters, one step at a time.</p>
+      <p class="page-intro">Your list is saved in this browser on this device. It is not sent to Ka Lynti or synced across devices.</p>
+    </section>
+
+    <section class="wrap todo-section" aria-labelledby="todo-title">
+      <div class="todo-card">
+        <div class="todo-heading">
+          <div>
+            <p class="eyebrow">TODAY, AT YOUR PACE</p>
+            <h2 id="todo-title">My to-do list</h2>
+          </div>
+          <span class="todo-count" id="task-count" aria-live="polite">0 tasks left</span>
+        </div>
+
+        <form class="todo-form" id="todo-form">
+          <label class="visually-hidden" for="todo-input">Add a task</label>
+          <input id="todo-input" name="task" type="text" maxlength="180" placeholder="What would you like to do?" autocomplete="off" required>
+          <button class="button primary" type="submit">Add task <span aria-hidden="true">＋</span></button>
+        </form>
+        <p class="todo-message" id="todo-message" role="status" aria-live="polite"></p>
+
+        <div class="todo-toolbar">
+          <div class="todo-filters" role="group" aria-label="Filter tasks">
+            <button type="button" class="filter-button is-selected" data-filter="all" aria-pressed="true">All</button>
+            <button type="button" class="filter-button" data-filter="active" aria-pressed="false">To do</button>
+            <button type="button" class="filter-button" data-filter="completed" aria-pressed="false">Done</button>
+          </div>
+          <button type="button" class="clear-button" id="clear-completed">Clear completed</button>
+        </div>
+
+        <ul class="todo-list" id="todo-list" aria-label="Tasks"></ul>
+        <p class="todo-empty" id="todo-empty">Nothing here just yet. Add a task above to get started.</p>
+      </div>
+      <p class="todo-privacy">Tip: Tasks remain in this browser unless you clear its site data. Avoid storing sensitive personal information here.</p>
+    </section>
+  </main>
+  <footer data-site-footer></footer>
+</body>
+</html>

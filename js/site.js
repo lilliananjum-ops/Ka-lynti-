@@ -3,7 +3,7 @@ const navItems = [
   ["Home", "index.html"], ["Understand", "understand.html"],
   ["Navigate", "navigate.html"], ["Know your rights", "rights.html"],
   ["Find support", "support.html"], ["Opportunities", "opportunities.html"],
-  ["About", "about.html"]
+  ["To-do list", "todo.html"], ["About", "about.html"]
 ];
 
 const currentPage = location.pathname.split("/").pop() || "index.html";
